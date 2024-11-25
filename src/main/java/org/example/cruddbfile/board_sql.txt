@@ -1,0 +1,20 @@
+table생성쿼리
+
+create table BOARD (
+        seq int AUTO_INCREMENT,
+        title varchar(100),
+        writer varchar(20),
+        content varchar(1000),
+        regdate timestamp default current_timestamp, 
+        cnt int default 0,
+        primary key(seq)
+);
+
+CRUD 쿼리문
+데이터 추가   insert into BOARD (title,writer,content) values ('제목','홍길동','내용');
+데이터 수정   update BOARD set title='제목2', content='내용' where seq=10
+데이터 삭제   delete from BOARD  where seq=10
+데이터 목록   
+select * from BOARD  order by regdate desc
+select * from BOARD  where seq=10
+select title, content from BOARD  where seq=10
